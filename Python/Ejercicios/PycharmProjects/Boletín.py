@@ -1,38 +1,30 @@
 # Ejercicio 1
 def numNaturales():
-        num = 0
-        while num <= 25:
-                print(num)
-                num = num + 1
+        for i in range(0,26):
+                print(i)
 
 # numNaturales()
 
 # Ejercicio 2
 def numImpares():
-        num = 0
-        while num <= 25:
-                if num%2!=0:
-                        print(num)
-                num = num + 1
+        for i in range(0,26):
+                if i%2!=0:
+                        print(i)
 
 # numImpares()
 
 # Ejercicio 3
 def numPares():
-        num = 40
-        while num <= 60:
-                if num%2==0:
-                        print(num)
-                num = num + 1
+        for i in range(0,26):
+                if i%2==0:
+                        print(i)
 
 # numPares()
 
 # Ejercicio 4
 def numMasCuatro():
-        num = 48
-        while num <= 120:
-                print(num)
-                num = num + 4
+        for i in range(48,121, 4):
+                print(i)
 
 # numMasCuatro()
 
@@ -64,7 +56,7 @@ def sumaDecreciendo():
 
         print(num)  
 
-sumaDecreciendo()
+# sumaDecreciendo()
 
 # Ejercicio 9
 def sumaDecreciendoImpares():
@@ -80,9 +72,47 @@ def sumaDecreciendoImpares():
 # Ejercicio 10
 def parImpar(num):
         if num%2==0:
-                print("El numero de par")
+                print("El numero es par")
         else:
                 print("El numero es impar")
 
-num = input("Introduce un nume: ")
-parImpar(num)
+#num = input("Introduce un numero: ")
+# parImpar(num)
+
+# Ejercicio 11
+def dobleSuma():
+    par = 0
+    impar = 0
+    for i in range(0,101):
+        if i%2==0:
+            par = par + i
+        else:
+            impar = impar + i
+
+    print(par)
+    print(impar)
+
+# dobleSuma()
+
+# Ejercicio 12
+def numTeclado(min, max):
+        par = 0
+        contador = 0
+        contadorPares = 0
+        for i in range(min,max+1):
+                contador = contador + 1
+                print(i)
+                if i%2==0:
+                        contadorPares = contadorPares + 1
+                        par = par + i
+        
+        print(f"Contador: {contador}")
+        print(f"Contador pares: {contadorPares}")
+        print(par)
+
+# min = input("Introduce el numero más pequeño: ")
+# min = int(min)
+# max = input("Introduce el numero más grande: ")
+# max = int(max)
+# numTeclado(min, max)
+
