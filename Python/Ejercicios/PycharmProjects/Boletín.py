@@ -116,3 +116,70 @@ def numTeclado(min, max):
 # max = int(max)
 # numTeclado(min, max)
 
+# Ejercicio 13
+def mulriplosTres():
+        contador = 0
+        for i in range(1,101):
+                if i%3==0:
+                        print(i)
+                        contador = contador + 1
+        
+        print(f"Contador: {contador}")
+
+# mulriplosTres()
+
+# Ejercicio 14
+def multiploDosTres(max):
+        suma = 0
+        contador = 0
+        for i in range(1,max+1):
+                if i%2==0 and i%3==0:
+                        print(i)
+                        contador = contador + 1
+                        suma = suma + i
+        
+        print(f"Contador: {contador}")
+        print(f"Suma: {suma}")
+
+# max = input("Introduce un numero: ")
+# max = int(max)
+# multiploDosTres(max)
+
+# Ejercicio 15
+def dosOpciones(a,b):
+        suma = 0
+        if a >= b:
+                for i in range(10,51,4):
+                        suma = suma + i
+                print(suma)
+        elif a/b <= 30:
+                result = a**2+b**2
+                print(result)
+        else:
+                print("No es ninguna opcion")
+        
+# a = input("Introduce a: ")
+# a = int(a)
+# b = input("Introduce b: ")
+# b = int(b)       
+# dosOpciones(a,b)
+
+#Ejercicio 16
+def tresOpciones(a,b,c):
+        result = 0
+        suma = 0
+        if a/b > 30:
+                result = a/c*b**3
+                print(f"result: {result}")
+        elif a/b <= 30:
+                for i in range(2,31):
+                        suma = suma + i**2
+                print(f"suma: {suma}")
+
+a = input("Introduce a: ")
+a = int(a)
+b = input("Introduce b: ")
+b = int(b) 
+c = input("Introduce c: ")
+c = int(c)      
+tresOpciones(a,b,c)
