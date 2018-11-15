@@ -88,8 +88,8 @@ def areas():
     print("2. Area triangulo")
     texto = "Escoja una opcion: "
 
-    respuesta = int(leerTelcado(texto))
-    while respuesta != 1 or respuesta != 2:
+    respuesta = leerTelcado(texto)
+    while respuesta != 1 or respuesta = 2:
         print(respuesta)
         print("No has introducido una opcion correcta")
         respuesta = leerTelcado(texto)
