@@ -176,10 +176,10 @@ def tresOpciones(a,b,c):
                         suma = suma + i**2
                 print(f"suma: {suma}")
 
-a = input("Introduce a: ")
-a = int(a)
-b = input("Introduce b: ")
-b = int(b) 
-c = input("Introduce c: ")
-c = int(c)      
-tresOpciones(a,b,c)
+# a = input("Introduce a: ")
+# a = int(a)
+# b = input("Introduce b: ")
+# b = int(b) 
+# c = input("Introduce c: ")
+# c = int(c)      
+# tresOpciones(a,b,c)

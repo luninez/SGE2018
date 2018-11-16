@@ -1,9 +1,69 @@
-def leerTelcado(texto):
-    a = input(texto)
-    return a
 
 # COMO HAGO TODOS LOS EJERCICIOS EN EL MISMO FICHERO, TENGO TODOS LOS SCRIPT COMO SI FUERAN FUNCIONES
 # PERO EL CODIGO ES EL MISMO QUE SI ESTUVIERAN FUERAS.
+
+# Ejercico 1
+def division (a,b):
+    if b==0:
+        print("No se puede dividir entre 0")
+        return
+    result = a/b
+    if a/b==0:
+        print("Es exacta")
+    else:
+        print("No es exacta")
+    print(result)
+        
+
+# a = input("Introduce el dividendo: ")
+# a = int(a)
+# b = input("Introduce el divisor: ")
+# b = int(b)
+# division(a,b)
+
+# Ejercico 2
+def mayorMenor (a,b):
+    if a>b:
+        print('%i es mayor que %i' %(a,b))
+    elif a < b:
+        print('%i es mayor que %i' %(b,a))    
+    else:
+        print("Ambos numeros son iguales.")
+
+
+# a = input("Introduce el dividendo: ")
+# a = int(a)
+# b = input("Introduce el divisor: ")
+# b = int(b)
+# mayorMenor(a,b)
+
+from datetime import datetime
+
+# Ejercico 3
+def anioAnio ():
+    anioAct = input("Introduce el anio actual: ")
+    anioAct = int(anioAct)
+
+    if anioAct != datetime.now().year:
+        print("No es el año actual.")
+        return
+
+    anio = input("Introduce otro anio: ")
+    anio = int(anio)
+    
+    result = anioAct - anio
+    if result < 0:
+        result = result * (-1)
+        print('Quedan %i años' %(result))  
+    else:
+        print('Hace %i años' %(result)) 
+
+
+# anioAnio()
+
+def leerTelcado(texto):
+    a = input(texto)
+    return a
 
 # Ejercicio 4
 def mayorMultiploMenor():
@@ -83,20 +143,23 @@ def ecuacionSegundoGrado():
 # ecuacionSegundoGrado()
 
 # Ejercicio 9
+from math import pi
+
 def areas():
     print("1. Area circulo")
     print("2. Area triangulo")
     texto = "Escoja una opcion: "
 
-    respuesta = leerTelcado(texto)
-    while respuesta != 1 or respuesta = 2:
+    respuesta = int(leerTelcado(texto))
+    
+    while respuesta != 1 and respuesta != 2:
         print(respuesta)
         print("No has introducido una opcion correcta")
         respuesta = leerTelcado(texto)
 
     if (respuesta == 1):
         radio = float(leerTelcado("Introduce el radio: "))
-        area = (3.14)*radio**2
+        area = pi*radio**2
         print('el area del circulo es %.3f ' % area)
     else:
         b = float(leerTelcado("Introduce la base del triangulo: "))
@@ -104,4 +167,25 @@ def areas():
         area = b*h/2
         print('El area del triángulo es: ', area)
 
-areas()
+# areas()
+
+# Ejercicio 10
+def medidas():
+    centimetros = int(leerTelcado("Introduce los centimetros: "))
+
+    if (centimetros >= 10**5):
+        kilometros = centimetros / 10**5
+        kilometros = int("{0:.0f}".format(kilometros))
+        centimetros = centimetros - kilometros*10**5
+        print('Kilometros: %i' %kilometros)
+
+    if (centimetros >= 10**2):
+        metros = centimetros / 10**2
+        metros = int("{0:.0f}".format(metros))
+        centimetros = centimetros - metros*10**2
+        print('Metros: %i' %metros)
+
+    if(centimetros!=0):
+        print("Centimetros: {0:.0f}".format(centimetros))
+
+# medidas()
