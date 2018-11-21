@@ -10,17 +10,17 @@ class Persona(): # los parentesis no son indispensables, se usan para la herenci
 
     # metodos getters y setters
     # estilo java
-    def get_nombre(self):
-        return self.__nombre
+    # def get_nombre(self):
+    #     return self.__nombre
 
-    def set_nombre(self, nombre):
-        return self.__nombre = nombre
+    # def set_nombre(self, nombre):
+    #     return self.__nombre = nombre
 
-    def get_edad(self):
-        return self.__edad
+    # def get_edad(self):
+    #     return self.__edad
     
-    def set_edad(self, edad):
-        return self.__edad = edad
+    # def set_edad(self, edad):
+    #     return self.__edad = edad
 
     # con anotaciones
     @property
