@@ -50,20 +50,20 @@ def multiplicar():
 
 # Ejercicio 8
 def sumaDecreciendo():
-        num = 10
-        for i in range(10,0):
+        num = 0
+        for i in range(11,1,-1):
                 num = num + i
 
         print(num)  
 
-# sumaDecreciendo()
+sumaDecreciendo()
 
 # Ejercicio 9
 def sumaDecreciendoImpares():
-        num = 10
-        for i in range(10,0):
+        num = 0
+        for i in range(11,1,-1):
                 num = num + i
-                if num%2==0:
+                if num%2!=0:
                         print(num)
                  
 

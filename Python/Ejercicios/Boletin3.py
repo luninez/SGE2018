@@ -82,57 +82,35 @@ def areas():
 # areas()
 
 # Ejercicio 5
+
+def cash(cambio, num):
+    if(cambio >= num):
+        contador = 0
+        while cambio >= 20:
+            cambio = cambio - 20
+            contador = contador + 1
+    print(contador)
+    return contador
+
 def cambio(precio,abonado):
     cambio = abonado - precio
 
     print("Su vuelta es:")
 
-    if(cambio >= 20):
-        contador = 0
-        while cambio >= 20:
-            cambio = cambio - 20
-            contador = contador + 1
-        print("Billetes de 20: "+str(contador))
-    if(cambio >= 10):
-        cambio = cambio - 10
-        print("Billetes de 10: 1")
-    if(cambio >= 5):
-        cambio = cambio - 5
-        print("Billetes de 5: 1")
-    if(cambio >= 2):
-        contador = 0
-        while cambio >= 2:
-            cambio = cambio - 2
-            contador = contador + 1
-        print("Monedas de 2: "+str(contador))
-    if(cambio >= 1):
-        cambio = cambio - 1
-        print("Monedas de 1: 1")
-    if(cambio >= 0.5):
-        cambio = cambio - 0.5
-        print("Monedas de 0.50: 1")
-    if(cambio >= 0.2):
-        contador = 0
-        while cambio >= 0.2:
-            cambio = cambio - 0.2
-            contador = contador + 1
-        print("Monedas de 0.20: "+str(contador))
-    if(cambio >= 0.1):
-        cambio = cambio - 0.1
-        print("Monedas de 0.1: 1")
-    if(cambio >= 0.05):
-        cambio = cambio - 0.05
-        print("Monedas de 0.05: 1")
-    if(cambio >= 0.02):
-        contador = 0
-        while cambio >= 0.02:
-            cambio = cambio - 0.02
-            contador = contador + 1
-        print("Monedas de 20: "+str(contador))
+    print('Billetes de 20: %f' %(cash(cambio,20)))
+    print('Billetes de 10: %f' %(cash(cambio,10)))
+    print('Billetes de 5: %f' %(cash(cambio,5)))
+    print('Monedas de 2: %f' %(cash(cambio,2)))
+    print('Monedas de 1: %f' %(cash(cambio,1)))
+    print('Monedas de 0.50: %f' %(cash(cambio,0.5)))
+    print('Monedas de 0.20: %f' %(cash(cambio,0.2)))
+    print('Monedas de 0.10: %f' %(cash(cambio,0.1)))
+    print('Monedas de 0.05: %f' %(cash(cambio,0.05)))
+    print('Monedas de 0.02: %f' %(cash(cambio,0.02)))
 
-# abonado = float(input("Introduzca el dinero: "))
-# precio = float(input("Introduzca el precio del refresco: "))
-# cambio(precio,abonado)
+abonado = float(input("Introduzca el dinero: "))
+precio = float(input("Introduzca el precio del refresco: "))
+cambio(precio,abonado)
 
 # Ejercicio 6
 def opcionesColores():
@@ -199,5 +177,5 @@ def votarColores():
         print("Pulsa -1 para salir")
         opcion = int(input("Escoja un color: "))
 
-votarColores()
+# votarColores()
 
