@@ -43,10 +43,10 @@ class fraccion():
             y = nmcm/frac2.__den
             num2 = y * frac2.__num
 
-            num = num1 + num2
+            suma = num1 + num2
             return fraccion(suma, nmcm)
         else:
-            suma = frac1.__num + frac2__num
+            suma = frac1.__num + frac2.__num
             return fraccion(suma, frac1.__den)
         
 
