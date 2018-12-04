@@ -70,7 +70,7 @@ class Fraccion():
             resta = self.__num - frac2.__num
             return self.__init__(resta, self.__den)
 
-    def multiplicar(self, frac2):
+    def __mul__(self, frac2):
         num = self.__num * frac2.__num
         den = self.__den * frac2.__den
         return self.__init__(num, den)
@@ -80,16 +80,25 @@ class Fraccion():
         den = self.__den * frac2.__num
         return self.__init__(num, den)
 
+    # __cmp__ ya no se respeta en pyton 3, es un comparador que devuelve -1,1,0 dependiendo del resultado
+
+    def __eq__(self, fraccion):
+        return self.den == fraccion.den and self.num == fraccion.num
+    
+    def __ne__(self, fraccion):
+        return not self.den == fraccion.den and self.num == fraccion.num
+
+    def __lt__(self, fraccion):
+        return self.den < fraccion.den and self.num < fraccion.num
+
+    def __le__(self, fraccion):
+        return self.den <= fraccion.den and self.num <= fraccion.num
+
+    def __gt__(self, fraccion):
+        return self.den > fraccion.den and self.num > fraccion.num
+
+    def __ge__(self, fraccion):
+        return self.den >= fraccion.den and self.num >= fraccion.num
+
     def __str__(self):
         return str(self.num) + '/' + str(self.den)
-
-if __name__ == "__main__":
-
-    frac1 = Fraccion(2,3)
-    frac2 = Fraccion(4,5)
-
-    frac1.sumar(frac2)
-    print(frac1.__str__())
-
-    frac1.dividir(frac2)
-    print(frac1.__str__())

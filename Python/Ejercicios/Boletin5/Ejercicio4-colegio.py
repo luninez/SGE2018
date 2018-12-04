@@ -97,7 +97,7 @@ class Estudiante(Persona):
         self.__id_estudiante = id_estudiante
 
     def __str__(self):
-        return self.id_estudiante + ' ' + super(Estudiante, self).str(Estudiante, self)
+        return str(self.id_estudiante) + ' ' + super().__str__()
 
 class Profesor(Persona):
     def __init__ (self, nombre, apellidos, dni, direccion, id_despacho):
@@ -113,9 +113,12 @@ class Profesor(Persona):
         self.__id_despacho = id_despacho
 
     def __str__(self):
-        return self.id_despacho + ' ' + super(Profesor, self).str(Profesor, self)
+        return str(self.id_despacho) + ' ' + super().__str__()
 
 if __name__ == "__main__":
 
     presona = Persona("Pepe","Pérez Pérez","12345678A", Direccion("calle","41010","Sevilla","Sevilla"))
-    print(Persona)
+    print(presona.__str__())
+
+    estudiante = Estudiante("Pepe","Pérez Pérez","12345678A", Direccion("calle","41010","Sevilla","Sevilla"),1)
+    print(estudiante.__str__())
